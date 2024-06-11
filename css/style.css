@@ -1,0 +1,166 @@
+@font-face {
+
+    font-family: "TTLakes";
+
+    src: url("../fonts/TTLakes-Medium.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TTLakes-Bold";
+    src: url("../fonts/TTLakesCondensed-Bold.woff2") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+/* Убираем декорации у кнопок */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Убираем декорации у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем маркеры списка и отступы */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Дополнительно, чтобы все элементы были сброшены до базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "TTLakes";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+
+.aside {
+    position: fixed;
+    /* Фиксируем блок */
+    left: 0;
+    /* Прижимаем к левой стороне */
+    top: 0;
+    /* Прижимаем к верхней части */
+    width: 320px;
+    /* Ширина блока, можете поменять на нужную вам */
+    height: 100vh;
+    /* Высота блока на весь экран */
+    /* Пример цвета фона, чтобы вы могли видеть блок */
+    /* Дополнительные стили по вашему усмотрению */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Добавляем это */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.aside-menu__list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 23px;
+}
+
+.aside-menu__item:nth-child(2) {
+    transform: translateX(-30px);
+}
+
+
+
+.aside-point {
+    margin-left: 20px;
+
+}
+
+.aside-point__item {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.aside-point__item::before {
+    content: "";
+    position: absolute;
+    background-image: url("../image/highlight.png");
+    width: 4px;
+    height: 32px;
+    left: -20px;
+    top: -5px;
+    bottom: 83.11%;
+    display: none;
+
+}
+
+.aside-point__item:hover::before {
+    display: block;
+
+}
+
+.aside-point__item:hover {
+    color: rgb(126, 126, 130);
+}
+
+
+
+
+.aside-contact {
+    margin: 20px 0;
+    /* Отступ сверху и снизу */
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-contact__list {
+    margin-left: 16px;
+    display: flex;
+}
+
+
+.aside-contact__item:not(:first-child) {
+    margin-left: 16px;
+    /* Отступы между элементами, кроме первого */
+}
+
+.aside-lang__list {
+    display: flex;
+    margin-left: 16px;
+    margin-top: 40px;
+
+}
+
+.aside-lang__item:not(:first-child) {
+    margin-left: 16px;
+}
+
+.aside-contact__adress--mail,
+.aside-contact__adress--number {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.aside-contact__adress--number > a {
+    font-family: "TTLakes-Bold";
+    font-size: 26px;
+
+
+}
+
+.aside-lang__item:hover {
+    color: rgb(126, 126, 130);
+}
